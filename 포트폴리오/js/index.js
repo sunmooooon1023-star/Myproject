@@ -1,5 +1,5 @@
 window.addEventListener('DOMContentLoaded', () => {
-  
+
   document.documentElement.classList.add('scroll-block'); // <html>
   document.body.classList.add('scroll-block');            // <body>
 
@@ -26,4 +26,29 @@ window.addEventListener('DOMContentLoaded', () => {
     document.documentElement.classList.remove('scroll-block');
     document.body.classList.remove('scroll-block');
   }, 7000);
+});
+
+
+/* about */
+
+// 플러그인 등록 필수
+gsap.registerPlugin(ScrambleTextPlugin);
+
+// 텍스트 분할 및 스크램블 예시
+const st = new SplitType('p', { types: 'chars', charClass: 'char' });
+st.chars.forEach(char => char.dataset.orig = char.textContent);
+
+// 애니메이션 예시: 5초 동안 스크램블 후 복원
+st.chars.forEach((char, i) => {
+  const delay = Math.random() * 3;
+  gsap.to(char, {
+    delay,
+    duration: 17,
+    scrambleText: {
+      text: char.dataset.orig,
+      chars: "upperAndLowerCase",
+      revealDelay: 0.1
+    },
+    ease: "none"
+  });
 });

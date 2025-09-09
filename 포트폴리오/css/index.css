@@ -7,7 +7,6 @@ body {
     margin: 0;
     padding: 0;
     background: #000000;
-    /*     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
 }
 
 html.scroll-block,
@@ -161,7 +160,45 @@ body.scroll-block {
     filter: blur(0);
 }
 
+/* about */
 
+    .about {
+        height: 100vh;
+        position: relative;
+    }
+    .text-block {
+      text-align: center;
+      color: #fff;
+    }
+
+    .text-block>p>span {
+      font-size: 150px;
+      margin-left: 10px;
+      vertical-align: 10px;
+    }
+
+    .text-block>p {
+      font-size: 50px;
+      position: absolute;
+      left: 18%;
+      top: 5%;
+    }
+
+    .text-block>p>strong {
+      vertical-align: 50px;
+      font-size: 50px;
+      margin-left: 20px;
+    }
+
+    .text-block>p+p {
+      position: absolute;
+      left: 35%;
+      top: 12%;
+    }
+
+    .text-block>p>em {
+      font-size: 60px;
+    }
 
 /* section01 */
 .section01 {
@@ -246,7 +283,7 @@ body.scroll-block {
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    margin-bottom: 100px;
+    height: 100vh;
 }
 
 .section02 > .sec02_info01 > .sec02_box2 {
@@ -328,7 +365,7 @@ body.scroll-block {
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    margin-bottom: 100px;
+    height: 100vh;
 }
 
 .section02 > .sec02_info02 > .sec02_box2 {
@@ -412,7 +449,6 @@ body.scroll-block {
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    margin-bottom: 100px;
 }
 
 .section02 > .sec02_info03 > .sec02_box2 {
