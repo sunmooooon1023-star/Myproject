@@ -34,16 +34,14 @@ window.addEventListener('DOMContentLoaded', () => {
 // 플러그인 등록 필수
 gsap.registerPlugin(ScrambleTextPlugin);
 
-// 텍스트 분할 및 스크램블 예시
-const st = new SplitType('p', { types: 'chars', charClass: 'char' });
-st.chars.forEach(char => char.dataset.orig = char.textContent);
+const st = new SplitType('.scramble', { types: 'chars', charClass: 'char' });
 
-// 애니메이션 예시: 5초 동안 스크램블 후 복원
-st.chars.forEach((char, i) => {
+st.chars.forEach(char => {
+  char.dataset.orig = char.textContent;
   const delay = Math.random() * 3;
   gsap.to(char, {
-    delay,
-    duration: 17,
+    delay: delay,
+    duration: 15,
     scrambleText: {
       text: char.dataset.orig,
       chars: "upperAndLowerCase",
@@ -52,3 +50,7 @@ st.chars.forEach((char, i) => {
     ease: "none"
   });
 });
+
+
+
+
