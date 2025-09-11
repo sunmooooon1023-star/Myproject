@@ -23,9 +23,21 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   setTimeout(() => {
-    document.documentElement.classList.remove('scroll-block');
-    document.body.classList.remove('scroll-block');
-  }, 7000);
+  document.documentElement.classList.remove('scroll-block');
+  document.body.classList.remove('scroll-block');
+}, 11000);
+
+
+
+
+setTimeout(() => {
+  document.querySelector('.main_right').classList.add('blur-left');
+  document.querySelector('.main_left_text').classList.add('blur-out');
+  document.querySelector('.move').classList.add('center');  // 기존 animate 유지, center만 추가
+}, 7500);
+
+
+
 });
 
 
