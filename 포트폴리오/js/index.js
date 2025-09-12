@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   setTimeout(() => {
     document.querySelector('.main_left_text > h2').classList.add('animate');
-    document.querySelector('.main_left > img').classList.add('animate');
+    document.querySelector('.main_left > svg.move').classList.add('animate');
   }, 1000);
 
   setTimeout(() => {
@@ -25,7 +25,7 @@ window.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => {
   document.documentElement.classList.remove('scroll-block');
   document.body.classList.remove('scroll-block');
-}, 11000);
+}, 16000);
 
 
 
@@ -33,10 +33,8 @@ window.addEventListener('DOMContentLoaded', () => {
 setTimeout(() => {
   document.querySelector('.main_right').classList.add('blur-left');
   document.querySelector('.main_left_text').classList.add('blur-out');
-  document.querySelector('.move').classList.add('center');  // 기존 animate 유지, center만 추가
+  document.querySelector('svg.move').classList.add('center');  // 기존 animate 유지, center만 추가
 }, 7500);
-
-
 
 });
 
